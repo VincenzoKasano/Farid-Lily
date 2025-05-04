@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding of Prilly & Farid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body class="relative bg-black md:flex md:items-center md:justify-center min-h-screen">
+
+  <!-- Desktop Overlay Background -->
+  <div class="hidden md:block absolute inset-0 z-0">
+    <img src="Images/4.jpg" alt="Background" class="w-full h-full object-cover opacity-60" />
+  </div>
+  <!-- Sound Toggle Button -->
+<div class="fixed top-4 right-4 z-50">
+  <button id="soundToggle" class="bg-white/30 backdrop-blur p-2 rounded-full text-white hover:bg-white/50 transition">
+    <i id="soundIcon" class="fas fa-volume-up"></i>
+  </button>
+</div>
+ <!-- Background Music -->
+ <audio id="bgMusic" autoplay loop>
+  <source src="audio/song.mp3" type="audio/mp3" />
+</audio>
+
+  <!-- Main Content (mobile look) -->
+  <div class="relative z-10 w-full max-w-md mx-auto h-screen bg-cover bg-center flex flex-col justify-center items-center text-white text-center" style="background-image: url('Images/1.1.png');">
+    <div class="bg-black/40 absolute inset-0"></div>
+    <div class="relative z-10 px-4">
+      <h2 class="text-md">The Wedding OF</h2>
+      <h1 class="text-4xl font-serif font-bold mb-6">Prilly & Farid</h1>
+      <a href="invitation.html" class="bg-white text-gray-800 px-6 py-2 rounded-full shadow hover:bg-gray-100 transition">OPEN INVITATION</a>
+    </div>
+  </div>
+  
+  <script>
+    const bgMusic = document.getElementById('bgMusic');
+    const soundToggle = document.getElementById('soundToggle');
+    const soundIcon = document.getElementById('soundIcon');
+  
+    let isPlaying = true;
+  
+    soundToggle.addEventListener('click', () => {
+      if (isPlaying) {
+        bgMusic.pause();
+        soundIcon.classList.remove('fa-volume-up');
+        soundIcon.classList.add('fa-volume-mute');
+      } else {
+        bgMusic.play();
+        soundIcon.classList.remove('fa-volume-mute');
+        soundIcon.classList.add('fa-volume-up');
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
+</body>
+</html>
