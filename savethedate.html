@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Save The Date</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes wave {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+    .animate-wave {
+      animation: wave 6s ease-in-out infinite;
+    }
+  </style>
+   <style>
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+    }
+</style>
+</head>
+<body class="relative bg-white text-center min-h-screen font-serif text-gray-900 overflow-hidden">
+
+  <!-- Background -->
+  <div class="absolute inset-0">
+    <img src="Images/4.jpg" alt="Background" class="w-full h-full object-cover" />
+  </div>
+   <!-- Background Music -->
+   <audio id="bgMusic" autoplay loop>
+    <source src="audio/song.mp3" type="audio/mp3" />
+  </audio>
+
+  <!-- Sound Toggle Button -->
+  <div class="fixed top-4 right-4 z-50">
+    <button id="soundToggle" class="bg-white/30 backdrop-blur p-2 rounded-full text-white hover:bg-white/50 transition">
+      <i id="soundIcon" class="fas fa-volume-up"></i>
+    </button>
+  </div>
+  
+<!-- Mobile Wrapper -->
+<div class="relative z-0 w-full max-w-md mx-auto min-h-screen flex flex-col  justify-between text-black "
+style="background-image: url('Images/bg.png'); background-size: cover; background-position: center;">
+
+<!-- Gradient Overlay transparan -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-white/20 z-10"></div>
+  <!-- Dekorasi Bunga -->
+  <img src="Images/blue-flower.png" class="absolute top-0 left-0 w-28 animate-wave" alt="Bunga Kiri Atas">
+  <img src="Images/blue-flower.png" class="absolute top-0 right-0 w-28 transform scale-x-[-1] animate-wave" alt="Bunga Kanan Atas">
+  <img src="Images/blue-flower.png" class="absolute bottom-0 left-0 w-28 animate-wave" alt="Bunga Kiri Bawah">
+  <img src="Images/blue-flower.png" class="absolute bottom-0 right-0 w-28 transform scale-x-[-1] animate-wave" alt="Bunga Kanan Bawah">
+
+  <!-- Konten Utama -->
+  <div class="relative z-10 max-w-md mx-auto px-6 py-20 space-y-6 animate-fade-in-up">
+    <h2 class="text-xl font-bold">SAVE THE DATE</h2>
+
+    <!-- Frame -->
+    <div class="border-4 border-blue-800 rounded-lg p-6 relative bg-white/60 backdrop-blur-sm animate-fade-in-up">
+      <img src="Images/.png" alt="" class="absolute inset-0 w-1000 h-full object-contain z-0 pointer-events-none" />
+      <div class="relative z-10 space-y-6">
+        <div>
+          <h3 class="text-lg font-bold">AKAD NIKAH</h3>
+          <p>Tanggal : Sabtu, 10 Mei 2025</p>
+          <p>Waktu : 09.00 WIB – 10.00 WIB</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold">RESEPSI</h3>
+          <p>Tanggal : Sabtu, 10 Mei 2025</p>
+          <p>Waktu : 11.00 WIB – 21.00 WIB</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lokasi -->
+    <div class="mt-8 animate-fade-in-up">
+      <h3 class="text-lg font-bold">BERTEMPAT</h3>
+      <p>Rumah Mempelai Wanita</p>
+      <p>Jl. Kampung Bahari gang X No. 20, RT004/RW01, Tanjung Priok, Jakarta Utara</p>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-gradient-to-t from-[#005BA1] to-[#1A2238] rounded-full px-4 py-2 flex justify-between items-center shadow-lg z-50">
+  
+    <!-- Love -->
+    <a href="Intro.html" class="group p-3 text-white hover:scale-110 transition">
+      <i class="fas fa-comments"></i>
+    </a>
+  
+    <!-- Map -->
+    <a href="map.html" class="group p-3 text-white hover:scale-110 transition">
+      <i class="fas fa-map-marked-alt"></i>
+    </a>
+  
+    <!-- Home (Aktif) -->
+    <a href="Invitation.html" class="group p-3 text-white hover:scale-110 transition">
+      <i class="fas fa-home relative z-10"></i>
+    </a>
+  
+    <!-- Message -->
+    <a href="pesan.html" class="group p-3 text-white hover:scale-110 transition">
+      <i class="fas fa-comment-dots"></i>
+    </a>
+  
+    <!-- Calendar -->
+    <a href="savethedate.html" class="group relative p-3 text-white hover:scale-110 transition">
+        <div class="absolute inset-0 rounded-full bg-white/30"></div>
+      <i class="fas fa-calendar-alt"></i>
+    </a>
+  
+  </nav>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</script>
+
+<script>
+  const bgMusic = document.getElementById('bgMusic');
+  const soundToggle = document.getElementById('soundToggle');
+  const soundIcon = document.getElementById('soundIcon');
+
+  let isPlaying = true;
+
+  soundToggle.addEventListener('click', () => {
+    if (isPlaying) {
+      bgMusic.pause();
+      soundIcon.classList.remove('fa-volume-up');
+      soundIcon.classList.add('fa-volume-mute');
+    } else {
+      bgMusic.play();
+      soundIcon.classList.remove('fa-volume-mute');
+      soundIcon.classList.add('fa-volume-up');
+    }
+    isPlaying = !isPlaying;
+  });
+</script>
+
+</body>
+</html>

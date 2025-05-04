@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Halaman 3 & 4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        @keyframes wave {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+        .animate-wave {
+            animation: wave 4s ease-in-out infinite;
+        }
+    </style>
+    <style>
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+    </style>
+    
+</head>
+
+<body class="relative bg-black min-h-screen">
+
+    <!-- Desktop Background -->
+    <div class="hidden md:block absolute inset-0 z-0">
+        <img src="Images/4.jpg" alt="Background" class="w-full h-full object-cover opacity-50" />
+    </div>
+<!-- Background Music -->
+<audio id="bgMusic" autoplay loop>
+    <source src="audio/song.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+    <!-- Mobile Wrapper -->
+    <div class="relative z-0 w-full max-w-md mx-auto min-h-screen flex flex-col justify-between text-white"
+        style="background-image: url('Images/bg.png'); background-size: cover; background-position: center;">
+
+        <!-- Gradient Overlay transparan -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white/20 z-10"></div>
+
+        <!-- Halaman 3: Wedding Gift Section -->
+        <section class="relative px-4 pt-10 pb-20 text-center overflow-y-auto z-20 animate-fade-in-up">
+
+            <!-- Gambar bunga kiri dan kanan atas -->
+            <img src="Images/blue-flower.png" class="absolute top--1 left--3 w-20 md:w-24 animate-wave z-40"
+                style="transform: rotate(90deg);" alt="Bunga Kiri" />
+            <img src="Images/blue-flower.png" class="absolute top--1 right-0 w-20 md:w-24 animate-wave z-40"
+                style="transform: scaleX(-1);" alt="Bunga Kanan" />
+
+  
+    <div class="mt-4 bg-white text-black p-4 rounded-xl shadow-lg">
+         <!-- Wedding Gift Section -->
+<div class="px-6 py-6 text-center">
+    <h2 class="text-lg font-bold text-black">Wedding Gift</h2>
+      <!-- Wedding Gift Text -->
+      <p class="text-black text-sm mb-4">
+
+          "DOA RESTU ANDA MERUPAKAN KARUNIA YANG SANGAT BERARTI BAGI KAMI. JIKA MEMBERI ADALAH
+          UNGKAPAN TANDA TERIMA KASIH ANDA, MAKA PEMBERIAN SIMBOL KASIH ITU AKAN KAMI TERIMA SEPUH HATI."
+      </p>
+      <!-- Cashless and Wedding Gift Buttons -->
+      <div class="flex justify-center space-x-8 mb-10">
+        <a href="#" class="px-8 py-3 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-700">
+            Cashless
+        </a>
+        <a href="https://maps.app.goo.gl/cFkaMtZBAgS15RNU9" class="px-8 py-3 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-700">
+            Wedding Gift
+        </a>
+    </div>
+      </div>
+      </div>
+  
+
+            <!-- More Information Section -->
+            <h3 class="text-black text-lg font-bold">More Information</h3>
+            <div class="mt-4 space-y-4">
+                <!-- Contact Info -->
+                <div class="flex justify-center items-center text-black rounded-xl bg-white/30 p-4 mb-4 shadow-xl">
+                    <!-- Gambar PNG untuk WhatsApp -->
+                    <img src="Images/wa.png" alt="WhatsApp Icon" class="w-6 h-6 mr-3">
+                    <a href="https://wa.me/6281382179976" class="text-xl font-semibold" target="_blank">
+                        081382179976 (Farid)
+                    </a>
+                </div>
+                
+<div class="flex justify-center items-center text-black rounded-xl bg-white/30 p-4 mb-4 shadow-xl">
+    <!-- Gambar PNG untuk WhatsApp -->
+    <img src="Images/wa.png" alt="WhatsApp Icon" class="w-6 h-6 mr-3">
+    <a href="https://wa.me/6289607820614" class="text-xl font-semibold" target="_blank">
+        089607820614 (Prilly)
+    </a>
+</div>
+
+<div class="flex justify-center items-center text-black rounded-xl bg-white/30 p-4 mb-4 shadow-xl">
+    <!-- Gambar PNG untuk Telepon (Pastikan mengganti src dengan path gambar Anda) -->
+    <img src="Images/bca.png" alt="Phone Icon" class="w-10 h-10 mr-4">
+    <a href="#" class="text-L font-semibold">
+         MUHAMAD FARID HARDIKA
+         690367603
+    </a>
+</div>
+
+<div class="flex justify-center items-center text-black rounded-xl bg-white/30 p-4 mb-4 shadow-xl">
+    <!-- Gambar PNG untuk Telepon (Pastikan mengganti src dengan path gambar Anda) -->
+    <img src="Images/bca.png" alt="Phone Icon" class="w-10 h-10 mr-4">
+    <a href="#" class="text-l font-semibold">
+        PRILLY ANDINI
+        6043379131
+    </a>
+</div>
+
+                <!-- Address -->
+                <div class="mt-4 text-sm text-center text-black font-semibold rounded-xl bg-white/30 p-4 shadow-xl">
+                    Jl. Budi Mulia, RT 004/RW 007, No. 39, Kelurahan Pademangan Barat, Kecamatan Pademangan, Kota Jakarta
+                    Utara, 14420
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sound Toggle Button -->
+        <div class="fixed top-4 right-4 z-50">
+            <button id="soundToggle" class="bg-white/30 backdrop-blur p-2 rounded-full text-white hover:bg-white/50 transition">
+                <i id="soundIcon" class="fas fa-volume-up"></i>
+            </button>
+        </div>
+
+        <!-- Bottom Navbar -->
+        <nav class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-gradient-to-t from-[#005BA1] to-[#1A2238] rounded-full px-4 py-2 flex justify-between items-center shadow-lg z-50">
+            <a href="intro.html" class="group p-3 text-white hover:scale-110 transition">
+                <i class="fas fa-comments"></i>
+            </a>
+            <a href="map.html" class="group p-3 text-white hover:scale-110 transition">
+                <i class="fas fa-map-marked-alt"></i>
+            </a>
+            <a href="Invitation.html" class="group relative p-3 text-white hover:scale-110 transition">
+                <i class="fas fa-home relative z-10"></i>
+            </a>
+            <a href="pesan.html" class="group relative p-3 text-white hover:scale-110 transition">
+                <div class="absolute inset-0 rounded-full bg-white/30"></div>
+                <i class="fas fa-comment-dots"></i>
+            </a>
+            <a href="savethedate.html" class="group p-3 text-white hover:scale-110 transition">
+                <i class="fas fa-calendar-alt"></i>
+            </a>
+        </nav>
+
+    </div>
+
+</script>
+
+<script>
+  const bgMusic = document.getElementById('bgMusic');
+  const soundToggle = document.getElementById('soundToggle');
+  const soundIcon = document.getElementById('soundIcon');
+
+  let isPlaying = true;
+
+  soundToggle.addEventListener('click', () => {
+    if (isPlaying) {
+      bgMusic.pause();
+      soundIcon.classList.remove('fa-volume-up');
+      soundIcon.classList.add('fa-volume-mute');
+    } else {
+      bgMusic.play();
+      soundIcon.classList.remove('fa-volume-mute');
+      soundIcon.classList.add('fa-volume-up');
+    }
+    isPlaying = !isPlaying;
+  });
+</script>
+
+
+</body>
+
+</html>

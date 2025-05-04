@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Halaman 3 & 4</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    @keyframes wave {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+    .animate-wave {
+      animation: wave 4s ease-in-out infinite;
+    }
+  </style>
+   <style>
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+    }
+</style>
+<style>
+  @keyframes wave {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(10px);
+    }
+  }
+
+  .animate-wave {
+    animation: wave 4s ease-in-out infinite;
+  }
+
+  .slideshow-container {
+    position: relative;
+    width: 100%; /* Lebar 100% sesuai container */
+    height: 400px; /* Sesuaikan dengan gambar */
+    overflow: hidden;
+    margin: 0; /* Hilangkan margin jika ada */
+    padding: 0; /* Hilangkan padding jika ada */
+}
+
+  /* Flexbox untuk gambar dalam slider */
+  .slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Hilangkan margin */
+  }
+
+  .slider-item {
+    min-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center; /* Menempatkan gambar di tengah */
+    
+  }
+</style>
+<style>/* Tombol prev dan next */
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%; /* Posisi vertikal di tengah */
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
+    color: white;
+    border: none;
+    font-size: 2rem; /* Ukuran font besar untuk tombol */
+    padding: 10px;
+    cursor: pointer;
+    
+  }
+  
+  /* Tombol prev di kiri */
+  .prev {
+    left: 20px; /* Tombol prev ditempatkan di kiri */
+  }
+  
+  /* Tombol next di kanan */
+  .next {
+    right: 20px; /* Tombol next ditempatkan di kanan */
+  }
+  
+  /* Tombol di bagian atas atau bawah slider */
+  .top-btn {
+    top: 170px; /* Tombol di bagian atas slider */
+  }
+  
+  .bottom-btn {
+    bottom: 0px; /* Tombol di bagian bawah slider */
+  }
+  
+  </style>
+  
+</head>
+<body class="min-h-screen bg-black items-center">
+
+  <!-- Desktop Background -->
+<div class="hidden md:block absolute inset-0 z-0" style="position: fixed; top: 0; left: 0;">
+  <img src="Images/4.jpg" alt="Background" class="w-full h-full object-cover opacity-50" />
+</div>
+<!-- Background Music -->
+<audio id="bgMusic" autoplay loop>
+  <source src="audio/song.mp3" type="audio/mp3" />
+  Your browser does not support the audio element.
+</audio>
+<!-- Mobile Wrapper -->
+<div class="relative z-0 w-full max-w-md mx-auto min-h-screen flex flex-col justify-between text-white"
+     style="background-image: url('Images/bg.png'); background-size: cover; background-position: center;">
+
+  <!-- Halaman 3: OUR MEMORIES -->
+  <section class="relative px-4 pt-10 pb-20 text-center z-20">
+    <!-- Gambar bunga kiri dan kanan atas -->
+    <img src="Images/blue-flower.png" class="absolute top--1 left--3 w-20 md:w-24 animate-wave z-40" style="transform: rotate(90deg);" alt="Bunga Kiri" />
+    <img src="Images/blue-flower.png" class="absolute top--1 right-0 w-20 md:w-24 animate-wave z-40" style="transform: scaleX(-1);" alt="Bunga Kanan" />
+
+    <h2 class="text-black text-xl font-serif font-bold mb-6">OUR MEMORIES</h2>
+
+    <!-- Slideshow Wrapper -->
+    <div class="slideshow-container relative w-3/4 mx-auto">
+      <!-- Gambar dalam Slideshow -->
+      <div class="slider-wrapper">
+        <img src="Images/1.1.png" class="slider-item w-40 h-60 -ml-2 z-10 rounded-md shadow-md" alt="Image 1">
+        <img src="Images/2.jpg" class="slider-item w-40 h-60 -ml-2 z-10 rounded-md shadow-md" alt="Image 2">
+        <img src="Images/4.png" class="slider-item w-40 h-60 -ml-2 z-10 rounded-md shadow-md" alt="Image 3">
+        <img src="Images/4.jpg" class="slider-item w-40 h-60 -ml-2 z-10 rounded-md shadow-md" alt="Image 4">
+        <img src="Images/5.jpg" class="slider-item w-40 h-60 -ml-2 z-10 rounded-md shadow-md" alt="Image 5">
+        <img src="Images/6.jpg" class="slider-item w-40 h-60 -ml-2 z-10 rounded-md shadow-md" alt="Image 6">
+        <img src="Images/7.jpg" class="slider-item w-40 h-60 -ml-2 z-10 rounded-md shadow-md" alt="Image 7">
+        <img src="Images/12.jpg" class="slider-item w-40 h-60 -ml-2 z-10 rounded-md shadow-md" alt="Image 8">
+        <img src="Images/13.jpg" class="slider-item w-40 h-60 -ml-2 z-10 rounded-md shadow-md" alt="Image 9">
+        <img src="Images/14.jpg" class="slider-item w-40 h-60 -ml-2 z-10 rounded-md shadow-md" alt="Image 10">
+      </div>
+    </div>
+
+    <!-- Tombol navigasi -->
+    <button class="prev top-btn" id="prevBtn">❮</button>
+    <button class="next top-btn" id="nextBtn">❯</button>
+
+    <!-- Info Pengantin -->
+    <div class="mt-10 space-y-8 text-sm animate-fade-in-up">
+      <!-- The Bride -->
+      <h3 class="text-black text-lg font-bold">THE BRIDE</h3>
+      <div class="relative w-40 mx-auto">
+        <img src="Images/3.png" class="rounded-xl max-w-full max-h-80 object-contain shadow" alt="Bride" />
+        <div class="absolute inset-x-0 bottom-0 p-4 text-center bg-gradient-to-t from-indigo-900 to-transparent text-white rounded-b-xl">
+          <p class="font-semibold text-lg">Prilly Andini</p>
+          <p class="text-sm">Putri pertama dari Bapak Abdul Rifat & Ibu Ria Purwomastuti</p>
+        </div>
+      </div>
+
+      <!-- The Groom -->
+      <h3 class="text-black text-lg font-bold">THE GROOM</h3>
+      <div class="relative w-40 mx-auto animate-fade-in-up">
+        <img src="Images/2.png" class="rounded-xl max-w-full max-h-80 object-contain shadow" alt="Groom" />
+        <div class="absolute inset-x-0 bottom-0 p-4 text-center bg-gradient-to-t from-blue-900 to-transparent text-white rounded-b-xl">
+          <p class="font-semibold text-lg">Farid Maulana</p>
+          <p class="text-sm">Putra pertama dari Bapak Yusuf Amin & Ibu Yulia Rahmadani</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sound Toggle Button -->
+  <div class="fixed top-4 right-4 z-50">
+    <button id="soundToggle" class="bg-white/30 backdrop-blur p-2 rounded-full text-white hover:bg-white/50 transition">
+      <i id="soundIcon" class="fas fa-volume-up"></i>
+    </button>
+  </div>
+
+  <!-- Bottom Navbar -->
+  <nav class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-gradient-to-t from-[#005BA1] to-[#1A2238] rounded-full px-4 py-2 flex justify-between items-center shadow-lg z-50">
+    <a href="Intro.html" class="group relative p-3 text-white hover:scale-110 transition">
+      <div class="absolute inset-0 rounded-full bg-white/30"></div>
+      <i class="fas fa-comments"></i>
+    </a>
+    <a href="map.html" class="group p-3 text-white hover:scale-110 transition">
+      <i class="fas fa-map-marked-alt"></i>
+    </a>
+    <a href="Invitation.html" class="group relative p-3 text-white hover:scale-110 transition">
+      <i class="fas fa-home relative z-10"></i>
+    </a>
+    <a href="pesan.html" class="group p-3 text-white hover:scale-110 transition">
+      <i class="fas fa-comment-dots"></i>
+    </a>
+    <a href="savethedate.html" class="group p-3 text-white hover:scale-110 transition">
+      <i class="fas fa-calendar-alt"></i>
+    </a>
+  </nav>
+</div>
+
+<!-- JavaScript for slider -->
+<script>
+  let currentIndex = 0;
+  const images = document.querySelectorAll('.slider-item');
+  const totalImages = images.length;
+
+  function showImage(index) {
+    images.forEach((image, i) => {
+      image.style.display = (i === index) ? 'block' : 'none';
+    });
+  }
+
+  // Next button
+  document.getElementById('nextBtn').addEventListener('click', function () {
+    currentIndex = (currentIndex + 1) % totalImages;
+    showImage(currentIndex);
+  });
+
+  // Previous button
+  document.getElementById('prevBtn').addEventListener('click', function () {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    showImage(currentIndex);
+  });
+
+  showImage(currentIndex);
+</script>
+
+<script>
+  const bgMusic = document.getElementById('bgMusic');
+  const soundToggle = document.getElementById('soundToggle');
+  const soundIcon = document.getElementById('soundIcon');
+
+  let isPlaying = true;
+
+  soundToggle.addEventListener('click', () => {
+    if (isPlaying) {
+      bgMusic.pause();
+      soundIcon.classList.remove('fa-volume-up');
+      soundIcon.classList.add('fa-volume-mute');
+    } else {
+      bgMusic.play();
+      soundIcon.classList.remove('fa-volume-mute');
+      soundIcon.classList.add('fa-volume-up');
+    }
+    isPlaying = !isPlaying;
+  });
+</script>
+
+</body>
+</html>

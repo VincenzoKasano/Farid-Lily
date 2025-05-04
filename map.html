@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maps - Prilly & Farid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+    }
+</style>
+</head>
+<body class="relative bg-black md:flex md:items-center md:justify-center min-h-screen">
+
+  <!-- Desktop Background -->
+  <div class="hidden md:block absolute inset-0 z-0">
+    <img src="Images/4.jpg" alt="Background" class="w-full h-full object-cover opacity-50" />
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="audio/song.mp3" type="audio/mp3" />
+  </audio>
+
+  <!-- Mobile Wrapper -->
+  <div class="relative z-10 w-full max-w-md mx-auto h-screen bg-cover bg-center text-white overflow-y-auto" style="background-image: url('Images/bg.png');">
+    
+    <!-- Top Flower Decoration -->
+    <img src="Images/top.png" class="w-full" alt="Bunga Atas" />
+
+    <!-- Section Content -->
+    <div class="px-6 py-6 text-center animate-fade-in-up">
+      <h2 class="text-lg font-bold text-black">MAPS</h2>
+
+      <div class="mt-4 bg-white text-black p-4 rounded-xl shadow-lg animate-fade-in-up">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d836.2138502942942!2d106.8755411076087!3d-6.117380338706845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1ff878b13809%3A0x57d2770bb6aa87c1!2sJl.%20Kp.%20Bahari%20Gg.%20V%20No.30A%209%2C%20RT.8%2FRW.1%2C%20Tj.%20Priok%2C%20Kec.%20Tj.%20Priok%2C%20Jkt%20Utara%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2014310!5e0!3m2!1sid!2sid!4v1746291774440!5m2!1sid!2sid" width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        <h3 class="font-bold text-lg">Rumah Mempelai Wanita</h3>
+        <p class="text-sm">Jl. Kampung Bahari gang V A.5 No. 29, RT009/RW01, Tanjung Priok, Jakarta Utara</p>
+        
+        <a href="https://maps.app.goo.gl/fvQiA2WotPvUEG3Q9" target="_blank" class="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+          OPEN GOOGLE MAPS
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom Flower Decoration -->
+    <img src="Images/bottom.png" class="w-full" alt="Bunga Bawah" />
+
+    <!-- Sound Toggle Button -->
+    <div class="fixed top-4 right-4 z-50">
+      <button id="soundToggle" class="bg-white/30 backdrop-blur p-2 rounded-full text-white hover:bg-white/50 transition">
+        <i id="soundIcon" class="fas fa-volume-up"></i>
+      </button>
+    </div>
+
+    <!-- Bottom Navbar -->
+    <nav class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-gradient-to-t from-[#005BA1] to-[#1A2238] rounded-full px-4 py-2 flex justify-between items-center shadow-lg z-50">
+      <a href="Intro.html" class="group p-3 text-white hover:scale-110 transition">
+        <i class="fas fa-comments"></i>
+      </a>
+      <a href="map.html" class="group relative p-3 text-white hover:scale-110 transition">
+        <div class="absolute inset-0 rounded-full bg-white/30"></div>
+        <i class="fas fa-map-marked-alt relative z-10"></i>
+      </a>
+      <a href="Invitation.html" class="group p-3 text-white hover:scale-110 transition">
+        <i class="fas fa-home"></i>
+      </a>
+      <a href="pesan.html" class="group p-3 text-white hover:scale-110 transition">
+        <i class="fas fa-comment-dots"></i>
+      </a>
+      <a href="savethedate.html" class="group p-3 text-white hover:scale-110 transition">
+        <i class="fas fa-calendar-alt"></i>
+      </a>
+    </nav>
+
+  </div>
+
+  <script>
+    const bgMusic = document.getElementById('bgMusic');
+    const soundToggle = document.getElementById('soundToggle');
+    const soundIcon = document.getElementById('soundIcon');
+
+    let isPlaying = true;
+
+    soundToggle.addEventListener('click', () => {
+      if (isPlaying) {
+        bgMusic.pause();
+        soundIcon.classList.remove('fa-volume-up');
+        soundIcon.classList.add('fa-volume-mute');
+      } else {
+        bgMusic.play();
+        soundIcon.classList.remove('fa-volume-mute');
+        soundIcon.classList.add('fa-volume-up');
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
+
+</body>
+</html>

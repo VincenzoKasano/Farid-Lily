@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undangan - Prilly & Farid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+    }
+</style>
+</head>
+<body class="relative bg-black md:flex md:items-center md:justify-center min-h-screen">
+
+  <!-- Desktop Background -->
+  <div class="hidden md:block absolute inset-0 z-0">
+    <img src="Images/4.jpg" alt="Background" class="w-full h-full object-cover opacity-50" />
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="audio/song.mp3" type="audio/mp3" />
+  </audio>
+
+  <!-- Mobile Wrapper -->
+  <div class="relative z-10 w-full max-w-md mx-auto h-screen bg-cover bg-center flex flex-col justify-between text-white" style="background-image: url('Images/3.jpg');">
+    <div class="relative w-full h-screen">
+        <!-- Logo -->
+        <a href="index.html" class="absolute top-0 left-4 text-white text-2xl font-bold z-50 animate-fade-in-up">
+          F&L
+        </a>
+      
+        <!-- Konten lain -->
+      </div>
+      
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-blue-900 opacity-100"></div>
+
+    <div class="absolute top-[300px] left-0 right-0 px-6 text-center z-40 animate-fade-in-up">
+
+      <h2 class="text-sm">The Wedding of</h2>
+      <h1 class="text-3xl font-serif font-bold">Prilly & Farid</h1>
+      <p class="text-sm -mt-1">10 • 5 • 2025</p>
+
+      <div class="mt-6 text-sm leading-relaxed">
+        <p class="italic">"Dan segala sesuatu Kami ciptakan berpasang-pasangan agar kamu mengingat (kebesaran Allah)."</p>
+        <p class="mt-1">(QS Az Zariyat: 49)</p>
+
+        <p class="mt-4">Bismillahirrahmanirrahim</p>
+        <p>Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
+        <p class="mt-2">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan acara pernikahan putra-putri kami.</p>
+      </div>
+    </div>
+<!-- Sound Toggle Button -->
+<div class="fixed top-4 right-4 z-50">
+    <button id="soundToggle" class="bg-white/30 backdrop-blur p-2 rounded-full text-white hover:bg-white/50 transition">
+      <i id="soundIcon" class="fas fa-volume-up"></i>
+    </button>
+  </div>
+  
+  
+  
+    <!-- Bottom Navbar -->
+    <!-- Tailwind Navbar Bawah -->
+<nav class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-gradient-to-t from-[#005BA1] to-[#1A2238] rounded-full px-4 py-2 flex justify-between items-center shadow-lg z-50">
+  
+    <!-- Love -->
+    <a href="Intro.html" class="group p-3 text-white hover:scale-110 transition">
+      <i class="fas fa-comments"></i>
+    </a>
+  
+    <!-- Map -->
+    <a href="map.html" class="group p-3 text-white hover:scale-110 transition">
+      <i class="fas fa-map-marked-alt"></i>
+    </a>
+  
+    <!-- Home (Aktif) -->
+    <a href="Invitation.html" class="group relative p-3 text-white hover:scale-110 transition">
+      <div class="absolute inset-0 rounded-full bg-white/30"></div>
+      <i class="fas fa-home relative z-10"></i>
+    </a>
+  
+    <!-- Message -->
+    <a href="pesan.html" class="group p-3 text-white hover:scale-110 transition">
+      <i class="fas fa-comment-dots"></i>
+    </a>
+  
+    <!-- Calendar -->
+    <a href="savethedate.html" class="group p-3 text-white hover:scale-110 transition">
+      <i class="fas fa-calendar-alt"></i>
+    </a>
+  
+  </nav>
+  
+      
+  </div>
+  <script>
+    const bgMusic = document.getElementById('bgMusic');
+    const soundToggle = document.getElementById('soundToggle');
+    const soundIcon = document.getElementById('soundIcon');
+  
+    let isPlaying = true;
+  
+    soundToggle.addEventListener('click', () => {
+      if (isPlaying) {
+        bgMusic.pause();
+        soundIcon.classList.remove('fa-volume-up');
+        soundIcon.classList.add('fa-volume-mute');
+      } else {
+        bgMusic.play();
+        soundIcon.classList.remove('fa-volume-mute');
+        soundIcon.classList.add('fa-volume-up');
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
+  
+</body>
+</html>
